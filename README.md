@@ -1,4 +1,4 @@
 # anithemes
 
-A mobile media player for Anime Themes.
+A mobile media player interface for Anime Themes.
 
