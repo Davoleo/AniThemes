@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class App extends StatefulWidget {
+class MainScreen extends StatefulWidget {
   @override
-  _AppState createState() => _AppState();
+  _MainScreenState createState() => _MainScreenState();
 }
 
-class _AppState extends State<App> with SingleTickerProviderStateMixin {
+class _MainScreenState extends State<MainScreen> {
   PageController _pageController;
   int _page = 1;
 
@@ -15,22 +15,22 @@ class _AppState extends State<App> with SingleTickerProviderStateMixin {
     return Scaffold(
       appBar: AppBar(title: Text("AniThemes")),
 
-//      body: PageView(
-//        children: <Widget>[
-//          Container(
-//            color: Colors.orangeAccent,
-//          ),
-//          Container(
-//            color: Colors.redAccent,
-//          ),
-//          Container(
-//            color: Colors.blueAccent,
-//          ),
-//        ],
-//        controller: _pageController,
-//        physics: BouncingScrollPhysics(),
-//        onPageChanged: onPageChanged,
-//      ),
+      body: PageView(
+        children: <Widget>[
+          Container(
+            color: Colors.orangeAccent,
+          ),
+          Container(
+            color: Colors.redAccent,
+          ),
+          Container(
+            color: Colors.blueAccent,
+          ),
+        ],
+        controller: _pageController,
+        physics: BouncingScrollPhysics(),
+        onPageChanged: onPageChanged,
+      ),
 
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
@@ -39,7 +39,7 @@ class _AppState extends State<App> with SingleTickerProviderStateMixin {
           BottomNavigationBarItem(icon: Icon(Icons.library_music), title: Text("Library"))
         ],
         selectedItemColor: Theme.of(context).primaryColorLight,
-        currentIndex: 1,
+        currentIndex: _page,
         onTap: navigationTapped,
         type: BottomNavigationBarType.fixed,
       ),
@@ -65,7 +65,6 @@ class _AppState extends State<App> with SingleTickerProviderStateMixin {
       curve: Curves.easeIn,
     );
   }
-
 
   void onPageChanged(int page) {
     setState(() {
