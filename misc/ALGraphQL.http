@@ -1,0 +1,10 @@
+POST https://graphql.anilist.co
+Content-Type: application/json
+Accept: application/json
+
+{
+  "query": "query ($name: String) {MediaListCollection(userName: $name) {lists {name}}",
+  "variables": {
+    "name": "Davoleo"
+  }
+}

@@ -17,6 +17,7 @@ class App extends StatelessWidget {
     primaryColor: Color(0xFF80cbc4),
     primaryColorLight: Color(0xFFb2fef7),
     primaryColorDark: Color(0xFF4f9a94),
+    accentColor: Color(0xFFFF7961)
   );
 
   // This widget is the root of your application.
