@@ -6,14 +6,19 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  PageController _pageController;
+  PageController? _pageController;
   int _page = 1;
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("AniThemes")),
+      appBar: AppBar(
+        title: Text("AniThemes"),
+        actions: [
+          IconButton(onPressed: () => Navigator.pushNamed(context, "/settings"), icon: Icon(Icons.settings))
+        ],
+      ),
 
       body: PageView(
         children: <Widget>[
@@ -34,9 +39,9 @@ class _MainScreenState extends State<MainScreen> {
 
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.search), title: Text("Search")),
-          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("Home")),
-          BottomNavigationBarItem(icon: Icon(Icons.library_music), title: Text("Library"))
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.library_music), label: "Library")
         ],
         selectedItemColor: Theme.of(context).primaryColorLight,
         currentIndex: _page,
@@ -54,12 +59,12 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   void dispose() {
-    _pageController.dispose();
+    _pageController?.dispose();
     super.dispose();
   }
 
   void navigationTapped(int page) {
-    _pageController.animateToPage(
+    _pageController?.animateToPage(
       page,
       duration: Duration(milliseconds: 300),
       curve: Curves.easeIn,

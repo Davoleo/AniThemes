@@ -1,4 +1,5 @@
 import 'package:anithemes/screen/home.dart';
+import 'package:anithemes/screen/settings.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(App());
@@ -27,6 +28,19 @@ class App extends StatelessWidget {
       title: 'AniThemes',
       theme: this.darkTheme,
       home: MainScreen(),
+      onGenerateRoute: (settings) => Router.getRoute(settings),
     );
+  }
+}
+
+abstract class Router {
+  static Route<dynamic> getRoute(RouteSettings settings) {
+    switch(settings.name) {
+      case "/settings":
+        return MaterialPageRoute(builder: (context) => SettingsScreen(), settings: settings);
+      case "/":
+      default:
+        return MaterialPageRoute(builder: (context) => MainScreen(), settings: settings);
+    }
   }
 }
