@@ -8,9 +8,10 @@ class App extends StatelessWidget {
 
   final ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
-    primaryColor: Color(0xFF1DB954),
-    primaryColorLight: Color(0xFF62EE82),
-    primaryColorDark: Color(0xFF008925),
+    primaryColor: Color(0xFF146EC8),
+    primaryColorLight: Color(0xFF65BCF4),
+    primaryColorDark: Color(0xFF114697),
+    accentColor: Color(0xFFE29C46)
   );
 
   final ThemeData darkTheme = ThemeData(
@@ -18,7 +19,7 @@ class App extends StatelessWidget {
     primaryColor: Color(0xFF80cbc4),
     primaryColorLight: Color(0xFFb2fef7),
     primaryColorDark: Color(0xFF4f9a94),
-    accentColor: Color(0xFFFF7961)
+    accentColor: Color(0xFFFF7451)
   );
 
   // This widget is the root of your application.
@@ -26,7 +27,8 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'AniThemes',
-      theme: this.darkTheme,
+      theme: this.lightTheme,
+      darkTheme: this.darkTheme,
       home: MainScreen(),
       onGenerateRoute: (settings) => Router.getRoute(settings),
     );
