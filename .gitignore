@@ -45,4 +45,6 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
+# Designs
 misc/old-design.jpg
+*.psd
