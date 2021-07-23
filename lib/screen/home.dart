@@ -1,3 +1,4 @@
+import 'package:anithemes/screen/library.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {
@@ -28,9 +29,7 @@ class _MainScreenState extends State<MainScreen> {
           Container(
             color: Colors.redAccent,
           ),
-          Container(
-            color: Colors.blueAccent,
-          ),
+          LibrarySection()
         ],
         controller: _pageController,
         physics: BouncingScrollPhysics(),

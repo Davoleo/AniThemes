@@ -1,5 +1,14 @@
 import 'package:flutter/painting.dart';
 
+enum WatchingStatus {
+  COMPLETED,
+  PLANNING,
+  WATCHING,
+  DROPPED,
+  PAUSED,
+  REPEATING
+}
+
 class Colors {
 
   static const baseColors = {

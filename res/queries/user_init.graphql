@@ -1,0 +1,8 @@
+query InitUser($username: String) {
+    User(name: $username) {
+        avatar {
+            medium
+        }
+        id
+    }
+}

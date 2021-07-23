@@ -1,0 +1,11 @@
+query ($user: Int, $filter: [MediaListStatus]) {
+    MediaList(type: ANIME, userId: $user, status_in: $filter) {
+        id,
+        media {
+            format
+            title {
+                english
+            }
+        }
+    }
+}
