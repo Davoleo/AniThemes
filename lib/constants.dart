@@ -1,5 +1,12 @@
 import 'package:flutter/painting.dart';
 
+enum AniContentCategory {
+  EVERYTHING,
+  SONG,
+  ANIME,
+  ARTIST
+}
+
 class Colors {
 
   static const baseColors = {

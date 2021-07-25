@@ -1,3 +1,4 @@
+import 'package:anithemes/screen/search.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {
@@ -22,9 +23,7 @@ class _MainScreenState extends State<MainScreen> {
 
       body: PageView(
         children: <Widget>[
-          Container(
-            color: Colors.orangeAccent,
-          ),
+          SearchSection(),
           Container(
             color: Colors.redAccent,
           ),
