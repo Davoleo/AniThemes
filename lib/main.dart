@@ -7,19 +7,20 @@ void main() => runApp(App());
 class App extends StatelessWidget {
 
   final ThemeData lightTheme = ThemeData(
-    brightness: Brightness.light,
-    primaryColor: Color(0xFF146EC8),
-    primaryColorLight: Color(0xFF65BCF4),
-    primaryColorDark: Color(0xFF114697),
-    accentColor: Color(0xFFE29C46)
+    //brightness: Brightness.light,
+    //primaryColor: Color(0xFF146EC8),
+    //primaryColorLight: Color(0xFF65BCF4),
+    //primaryColorDark: Color(0xFF114697),
+    colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFF146EC8), brightness: Brightness.light)
   );
 
   final ThemeData darkTheme = ThemeData(
-    brightness: Brightness.dark,
-    primaryColor: Color(0xFF80cbc4),
-    primaryColorLight: Color(0xFFb2fef7),
-    primaryColorDark: Color(0xFF4f9a94),
-    accentColor: Color(0xFFFF7451)
+    //brightness: Brightness.dark,
+    // primaryColor: Color(0xFF80cbc4),
+    // primaryColorLight: Color(0xFFb2fef7),
+    // primaryColorDark: Color(0xFF4f9a94),
+    // accentColor: Color(0xFFFF7451)
+    colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFF80cbc4), brightness: Brightness.dark)
   );
 
   // This widget is the root of your application.

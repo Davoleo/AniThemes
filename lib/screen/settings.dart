@@ -14,13 +14,13 @@ class SettingsScreen extends StatelessWidget {
       body: Container(
         child: SettingsList(
           contentPadding: EdgeInsets.only(top: 16),
-          darkBackgroundColor: Colors.transparent,
+          darkTheme: SettingsThemeData(settingsSectionBackground: Colors.transparent),
           sections: [
           SettingsSection(
-            title: "Account",
+            title: Text("Account"),
             tiles: [
               SettingsTile(
-                title: "AniList Account Name",
+                title: Text("AniList Account Name"),
                 leading: Icon(Icons.account_circle),
                 onPressed: (buildContext) async {
                   SharedPreferences prefs = await SharedPreferences.getInstance();
